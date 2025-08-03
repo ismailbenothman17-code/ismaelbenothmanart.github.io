@@ -1,64 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ismail Ben Othman - Artiste Peintre</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Galerie - Ismael Ben Othman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+    #galerie {
+      background-color: #FFD700;
+      padding: 40px;
+    }
+    #galerie h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .gallery-item {
+      border: 8px solid #444;
+      padding: 5px;
+      background-color: white;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="ismail2.jpg" alt="Ismail Ben Othman" class="hero-image" />
-    <h1>Ismail Ben Othman</h1>
-    <p>Artiste Peintre | Créativité, Couleur et Émotion</p>
-  </header>
-
-  <section id="gallery">
+  <section id="galerie">
     <h2>Galerie</h2>
-    <div class="gallery">
-      <a href="oeuvre1.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre1.jpg" alt="Œuvre 1" /></a>
-      <a href="oeuvre2.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre2.jpg" alt="Œuvre 2" /></a>
-      <a href="oeuvre3.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre3.jpg" alt="Œuvre 3" /></a>
-      <a href="oeuvre4.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre4.jpg" alt="Œuvre 4" /></a>
-      <a href="oeuvre5.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre5.jpg" alt="Œuvre 5" /></a>
-      <a href="oeuvre6.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre6.jpg" alt="Œuvre 6" /></a>
-      <a href="oeuvre7.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre7.jpg" alt="Œuvre 7" /></a>
-      <a href="oeuvre8.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre8.jpg" alt="Œuvre 8" /></a>
-      <a href="oeuvre9.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre9.jpg" alt="Œuvre 9" /></a>
-      <a href="oeuvre10.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre10.jpg" alt="Œuvre 10" /></a>
-      <a href="oeuvre11.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre11.jpg" alt="Œuvre 11" /></a>
-      <a href="oeuvre12.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre12.jpg" alt="Œuvre 12" /></a>
-      <a href="oeuvre13.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre13.jpg" alt="Œuvre 13" /></a>
-      <a href="oeuvre14.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre14.jpg" alt="Œuvre 14" /></a>
-      <a href="oeuvre15.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre15.jpg" alt="Œuvre 15" /></a>
-      <a href="oeuvre16.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre16.jpg" alt="Œuvre 16" /></a>
-      <a href="oeuvre17.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre17.jpg" alt="Œuvre 17" /></a>
-      <a href="oeuvre18.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre18.jpg" alt="Œuvre 18" /></a>
-      <a href="oeuvre19.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre19.jpg" alt="Œuvre 19" /></a>
-      <a href="oeuvre20.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre20.jpg" alt="Œuvre 20" /></a>
-      <a href="oeuvre21.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre21.jpg" alt="Œuvre 21" /></a>
-      <a href="oeuvre22.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre22.jpg" alt="Œuvre 22" /></a>
-      <a href="oeuvre23.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre23.jpg" alt="Œuvre 23" /></a>
-      <a href="oeuvre24.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre24.jpg" alt="Œuvre 24" /></a>
-      <a href="oeuvre25.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre25.jpg" alt="Œuvre 25" /></a>
-      <a href="oeuvre26.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre26.jpg" alt="Œuvre 26" /></a>
-      <a href="oeuvre27.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre27.jpg" alt="Œuvre 27" /></a>
-      <a href="oeuvre28.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre28.jpg" alt="Œuvre 28" /></a>
-      <a href="oeuvre29.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre29.jpg" alt="Œuvre 29" /></a>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="assets/images/oeuvre1.jpg" alt="Œuvre 1"></div>
+      <div class="gallery-item"><img src="assets/images/oeuvre2.jpg" alt="Œuvre 2"></div>
+      <div class="gallery-item"><img src="assets/images/oeuvre3.jpg" alt="Œuvre 3"></div>
+      <div class="gallery-item"><img src="assets/images/oeuvre4.jpg" alt="Œuvre 4"></div>
     </div>
   </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email : <a href="mailto:ismailbenothman17@gmail.com">ismailbenothman17@gmail.com</a></p>
-    <p>Téléphone : <a href="tel:+21654427672">+216 54 427 672</a></p>
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    const lightbox = GLightbox({ selector: '.glightbox' });
-  </script>
 </body>
 </html>
