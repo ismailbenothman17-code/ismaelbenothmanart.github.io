@@ -3,44 +3,28 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ismael Ben Othman - Artiste Peintre</title>
+    <title>Ismail Ben Othman - Artiste Peintre</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <img src="profile.jpg" alt="Ismael Ben Othman" class="profile-pic">
-        <h1>Ismael Ben Othman</h1>
-        <p>Artiste Peintre Tunisien</p>
-        <div class="lang-switch">
-            <button onclick="setLanguage('fr')">FR</button>
-            <button onclick="setLanguage('en')">EN</button>
-        </div>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/ismail.benothman" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" id="instaLink" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
+        <h1>Ismail Ben Othman</h1>
+        <p>Artiste peintre contemporain</p>
     </header>
 
-    <section class="gallery" id="gallery">
-        <!-- Images cliquables sans légendes -->
-        <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" alt="Œuvre 1" class="art-frame"></a>
-        <a href="images/2.jpg" target="_blank"><img src="images/2.jpg" alt="Œuvre 2" class="art-frame"></a>
-        <a href="images/3.jpg" target="_blank"><img src="images/3.jpg" alt="Œuvre 3" class="art-frame"></a>
-        <a href="images/4.jpg" target="_blank"><img src="images/4.jpg" alt="Œuvre 4" class="art-frame"></a>
-        <a href="images/5.jpg" target="_blank"><img src="images/5.jpg" alt="Œuvre 5" class="art-frame"></a>
-        <a href="images/6.jpg" target="_blank"><img src="images/6.jpg" alt="Œuvre 6" class="art-frame"></a>
-        <a href="images/7.jpg" target="_blank"><img src="images/7.jpg" alt="Œuvre 7" class="art-frame"></a>
-        <a href="images/8.jpg" target="_blank"><img src="images/8.jpg" alt="Œuvre 8" class="art-frame"></a>
-        <a href="images/9.jpg" target="_blank"><img src="images/9.jpg" alt="Œuvre 9" class="art-frame"></a>
-        <a href="images/10.jpg" target="_blank"><img src="images/10.jpg" alt="Œuvre 10" class="art-frame"></a>
+    <section class="gallery">
+        <a href="images/1.jpg" data-lightbox="artworks"><img src="images/1.jpg" alt="œuvre 1"></a>
+        <a href="images/2.jpg" data-lightbox="artworks"><img src="images/2.jpg" alt="œuvre 2"></a>
+        <a href="images/3.jpg" data-lightbox="artworks"><img src="images/3.jpg" alt="œuvre 3"></a>
+        <a href="images/4.jpg" data-lightbox="artworks"><img src="images/4.jpg" alt="œuvre 4"></a>
+        <!-- Ajoute plus ici si nécessaire -->
     </section>
 
-    <script>
-        function setLanguage(lang) {
-            document.documentElement.lang = lang;
-        }
-    </script>
+    <footer>
+        <p>© 2025 Ismail Ben Othman</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
