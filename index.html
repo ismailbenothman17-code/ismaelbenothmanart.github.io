@@ -1,50 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ismail Ben Othman - Artiste peintre</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ismael Ben Othman - Artiste Peintre</title>
+  <link rel="stylesheet" href="styles/style.css"/>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
+
 <body>
-  <header class="hero">
-    <img src="assets/images/ismael.jpg" alt="Ismail Ben Othman" class="profile-img">
-    <h1>Ismail Ben Othman</h1>
-    <p data-fr="Artiste peintre tunisien" data-en="Tunisian visual artist">Artiste peintre tunisien</p>
-    <div class="lang-switch">
+  <header>
+    <h1>Ismael Ben Othman</h1>
+    <p>Artiste Peintre</p>
+    <nav>
       <button onclick="switchLang('fr')">FR</button>
       <button onclick="switchLang('en')">EN</button>
-    </div>
+    </nav>
   </header>
 
-  <section class="gallery-section">
+  <section id="gallery">
     <h2 data-fr="Galerie" data-en="Gallery">Galerie</h2>
     <div class="gallery">
-      <!-- Exemple d’image -->
-      <a href="assets/images/oeuvre1.jpg" target="_blank">
-        <img src="assets/images/oeuvre1.jpg" alt="Oeuvre 1">
-      </a>
-      <a href="assets/images/oeuvre2.jpg" target="_blank">
-        <img src="assets/images/oeuvre2.jpg" alt="Oeuvre 2">
-      </a>
+      <!-- Exemples d’images -->
+      <a href="assets/oeuvre1.jpg" target="_blank"><img src="assets/oeuvre1.jpg" alt="Oeuvre 1"></a>
+      <a href="assets/oeuvre2.jpg" target="_blank"><img src="assets/oeuvre2.jpg" alt="Oeuvre 2"></a>
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact">
     <h2 data-fr="Contact" data-en="Contact">Contact</h2>
-    <p>Email : <a href="mailto:ismailbenothman17@gmail.com">ismailbenothman17@gmail.com</a></p>
+    <p>Email : <a href="mailto:ismaelbenothman17@gmail.com">ismaelbenothman17@gmail.com</a></p>
     <p>Téléphone : <a href="tel:+21654427672">+216 54 427 672</a></p>
-    <div class="socials">
-      <a href="https://www.facebook.com/ismail.benothman" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    </div>
   </section>
 
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('[data-fr], [data-en]').forEach(el => {
-        el.textContent = el.dataset[lang];
+      document.querySelectorAll("[data-fr]").forEach(el => {
+        el.textContent = el.getAttribute("data-" + lang);
       });
     }
   </script>
