@@ -6,43 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ismael Ben Othman - Artiste Peintre</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <img src="ismael.jpg" alt="Ismael Ben Othman" class="hero-image" />
     <h1>Ismael Ben Othman</h1>
-    <p>Artiste Peintre | Créativité, Couleur et Émotion</p>
+    <p>Artiste Peintre Tunisien</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/ismail.benothman" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
   </header>
-
-  <section id="gallery">
+  <section class="hero">
+    <img src="ismael.jpg" alt="Ismael Ben Othman en train de peindre" />
+  </section>
+  <section class="gallery">
     <h2>Galerie</h2>
-    <div class="gallery">
-      <a href="oeuvre1.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre1.jpg" alt="Œuvre 1" /></a>
-      <a href="oeuvre2.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre2.jpg" alt="Œuvre 2" /></a>
-      <a href="oeuvre3.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre3.jpg" alt="Œuvre 3" /></a>
-      <a href="oeuvre4.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre4.jpg" alt="Œuvre 4" /></a>
-      <a href="oeuvre5.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre5.jpg" alt="Œuvre 5" /></a>
-      <a href="oeuvre6.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre6.jpg" alt="Œuvre 6" /></a>
-      <a href="oeuvre7.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre7.jpg" alt="Œuvre 7" /></a>
-      <a href="oeuvre8.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre8.jpg" alt="Œuvre 8" /></a>
-      <a href="oeuvre9.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre9.jpg" alt="Œuvre 9" /></a>
-      <a href="oeuvre10.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre10.jpg" alt="Œuvre 10" /></a>
-      <a href="oeuvre11.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre11.jpg" alt="Œuvre 11" /></a>
-      <a href="oeuvre12.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre12.jpg" alt="Œuvre 12" /></a>
-      <a href="oeuvre13.jpg" class="glightbox" data-gallery="artworks"><img src="oeuvre13.jpg" alt="Œuvre 13" /></a>
+    <div class="grid">
+      <!-- Ajoutez vos images ici -->
+      <img src="images/oeuvre1.jpg" alt="Oeuvre 1" />
+      <img src="images/oeuvre2.jpg" alt="Oeuvre 2" />
+      <img src="images/oeuvre3.jpg" alt="Oeuvre 3" />
+      <img src="images/oeuvre4.jpg" alt="Oeuvre 4" />
+      <img src="images/oeuvre5.jpg" alt="Oeuvre 5" />
     </div>
   </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email : <a href="mailto:ismaelbenothman.art@gmail.com">ismaelbenothman.art@gmail.com</a></p>
-    <p>Téléphone : <a href="tel:+21654427672">+216 54 427 672</a></p>
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    const lightbox = GLightbox({ selector: '.glightbox' });
-  </script>
+  <footer>
+    <p>&copy; 2025 Ismael Ben Othman. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
