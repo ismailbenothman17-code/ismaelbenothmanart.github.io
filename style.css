@@ -2,67 +2,66 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f9f7f1, #fef5e7);
+  background: linear-gradient(to bottom, #fff3c2, #ffc400);
   color: #222;
+  text-align: center;
 }
 header {
-  background: #f2545b;
+  padding: 20px;
+}
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+h1 {
+  font-size: 2.5rem;
+  margin: 0.5em 0 0.2em;
+}
+button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  background-color: #222;
   color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  cursor: pointer;
 }
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+button:hover {
+  background-color: #444;
 }
-header p {
-  font-size: 1.2rem;
+.social-icons {
+  margin: 15px 0;
 }
 .social-icons a {
-  color: white;
-  margin: 0 1rem;
-  font-size: 1.5rem;
+  margin: 0 10px;
   text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
-.hero {
-  text-align: center;
-  padding: 2rem;
-}
-.hero img {
-  max-width: 300px;
-  border-radius: 20px;
-  border: 4px solid #f2545b;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+.social-icons i {
+  margin-right: 5px;
 }
 .gallery {
-  padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
-.gallery h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #f2545b;
+.gallery figure {
+  margin: 10px;
+  border: 3px solid white;
+  background-color: #fff5da;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
+.gallery img {
+  width: 200px;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #ddd;
 }
-.grid img {
-  width: 100%;
-  border: 5px solid #f2545b;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-.grid img:hover {
-  transform: scale(1.05);
-}
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f2545b;
-  color: white;
-  margin-top: 2rem;
+.gallery figcaption {
+  padding: 10px;
+  font-weight: bold;
 }
