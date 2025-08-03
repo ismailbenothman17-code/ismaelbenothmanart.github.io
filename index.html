@@ -1,146 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ismail Ben Othman - Artiste Peintre</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fffef7;
-    }
-
-    header {
-      background-color: #404c5a; /* Gris de Payne */
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    }
-
-    h1 {
-      margin-top: 20px;
-      font-size: 2em;
-    }
-
-    .lang-switch {
-      margin: 15px 0;
-    }
-
-    .lang-switch button {
-      background-color: #ffde00;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .social-links {
-      margin: 15px 0;
-      font-size: 1.5em;
-    }
-
-    .social-links a {
-      color: white;
-      margin: 0 10px;
-      transition: transform 0.2s;
-    }
-
-    .social-links a:hover {
-      transform: scale(1.2);
-      color: #ffde00;
-    }
-
-    section.gallery-section {
-      background-color: #ffeb3b; /* Cadmium Yellow */
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    footer {
-      background-color: #f4f4f4;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
-  <header>
-    <img src="ismael.jpg" alt="Ismail Ben Othman" class="profile-img" />
+  <header class="hero">
+    <img src="ismael.jpg" alt="Ismail Ben Othman" class="profile-pic" />
     <h1>Ismail Ben Othman</h1>
-    <p>Artiste peintre tunisien</p>
-
-    <div class="lang-switch">
-      <button onclick="window.location.href='en.html'">FR/EN</button>
-    </div>
-
-    <div class="social-links">
+    <p class="subtitle" data-fr="Artiste peintre tunisien" data-en="Tunisian Visual Artist">Artiste peintre tunisien</p>
+    <button class="lang-switch" onclick="switchLang()">FR/EN</button>
+    <div class="social-icons">
       <a href="https://www.facebook.com/ismail.benothman" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
   </header>
 
-  <section class="gallery-section">
-    <h2>Galerie</h2>
-    <div class="gallery">
-      <img src="oeuvre1.jpg" alt="Tableau 1">
-      <img src="oeuvre2.jpg" alt="Tableau 2">
-      <img src="oeuvre3.jpg" alt="Tableau 3">
-      <img src="oeuvre4.jpg" alt="Tableau 4">
-      <img src="oeuvre5.jpg" alt="Tableau 5">
-      <img src="oeuvre6.jpg" alt="Tableau 6">
-      <img src="oeuvre7.jpg" alt="Tableau 7">
-      <img src="oeuvre8.jpg" alt="Tableau 8">
-      <img src="oeuvre10.jpg" alt="Tableau 9">
-      <img src="oeuvre11.jpg" alt="Tableau 10">
-      <img src="oeuvre12.jpg" alt="Tableau 11">
-      <img src="oeuvre13.jpg" alt="Tableau 12">
-    </div>
-  </section>
+  <main>
+    <section class="gallery-section">
+      <h2 class="gallery-title" data-fr="Galerie" data-en="Gallery">Galerie</h2>
+      <div class="gallery">
+        <a href="oeuvre1.jpg" target="_blank"><img src="oeuvre1.jpg" alt="Tableau 1"></a>
+        <a href="oeuvre2.jpg" target="_blank"><img src="oeuvre2.jpg" alt="Tableau 2"></a>
+        <a href="oeuvre3.jpg" target="_blank"><img src="oeuvre3.jpg" alt="Tableau 3"></a>
+        <a href="oeuvre4.jpg" target="_blank"><img src="oeuvre4.jpg" alt="Tableau 4"></a>
+        <a href="oeuvre5.jpg" target="_blank"><img src="oeuvre5.jpg" alt="Tableau 5"></a>
+        <a href="oeuvre6.jpg" target="_blank"><img src="oeuvre6.jpg" alt="Tableau 6"></a>
+        <a href="oeuvre7.jpg" target="_blank"><img src="oeuvre7.jpg" alt="Tableau 7"></a>
+        <a href="oeuvre8.jpg" target="_blank"><img src="oeuvre8.jpg" alt="Tableau 8"></a>
+        <a href="oeuvre10.jpg" target="_blank"><img src="oeuvre10.jpg" alt="Tableau 9"></a>
+        <a href="oeuvre11.jpg" target="_blank"><img src="oeuvre11.jpg" alt="Tableau 10"></a>
+        <a href="oeuvre12.jpg" target="_blank"><img src="oeuvre12.jpg" alt="Tableau 11"></a>
+        <a href="oeuvre13.jpg" target="_blank"><img src="oeuvre13.jpg" alt="Tableau 12"></a>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    &copy; 2025 Ismail Ben Othman. Tous droits réservés.
-  </footer>
+  <script>
+    function switchLang() {
+      const elements = document.querySelectorAll('[data-fr]');
+      elements.forEach(el => {
+        const current = el.textContent.trim();
+        const fr = el.getAttribute('data-fr');
+        const en = el.getAttribute('data-en');
+        el.textContent = (current === fr) ? en : fr;
+      });
+    }
+  </script>
 </body>
-
 </html>
+
