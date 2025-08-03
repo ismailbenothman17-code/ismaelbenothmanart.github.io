@@ -1,36 +1,140 @@
+/* styles.css mis à jour pour galerie avec effet lightbox, responsive et design artistique */
 
 body {
-    font-family: Arial, sans-serif;
-    background: #fffaf2;
-    color: #222;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #333;
 }
-header {
-    background: #ff5c57;
-    color: white;
-    padding: 2rem 1rem;
+
+.hero {
+  background-color: #4B5358; /* Gris de Payne */
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
 }
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 10px 0 5px;
+  font-size: 2rem;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.language-toggle {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 8px;
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.galerie-section {
+  background-color: #FFEF3D; /* Jaune cadmium */
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.galerie-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #000;
+}
+
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.gallery a {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gallery a:hover {
+  transform: scale(1.05);
+}
+
 .gallery img {
-    width: 250px;
-    height: auto;
-    border: 5px solid #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-.gallery img:hover {
-    transform: scale(1.05);
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 }
-footer {
-    background: #eee;
-    padding: 1rem;
-    margin-top: 2rem;
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 4px solid white;
+  border-radius: 12px;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .galerie-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .language-toggle {
+    padding: 4px 8px;
+    font-size: 0.9rem;
+  }
 }
