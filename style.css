@@ -2,67 +2,61 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f9f7f1, #fef5e7);
+  background: linear-gradient(to right, #ffe259, #ffa751);
   color: #222;
 }
+
 header {
-  background: #f2545b;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-header p {
-  font-size: 1.2rem;
-}
-.social-icons a {
-  color: white;
-  margin: 0 1rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-.hero {
   text-align: center;
   padding: 2rem;
+  background: #fff5e1;
 }
-.hero img {
-  max-width: 300px;
-  border-radius: 20px;
-  border: 4px solid #f2545b;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+.hero-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
 }
-.gallery {
-  padding: 2rem;
-  text-align: center;
-}
-.gallery h2 {
+
+h1 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #f2545b;
+  margin: 0.5rem 0;
+  color: #c44536;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-.grid img {
-  width: 100%;
-  border: 5px solid #f2545b;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-.grid img:hover {
-  transform: scale(1.05);
-}
-footer {
+
+h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  color: #d72638;
   text-align: center;
-  padding: 1rem;
-  background-color: #f2545b;
-  color: white;
-  margin-top: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+.gallery a img {
+  width: 100%;
+  border: 10px solid white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.gallery a img:hover {
+  transform: scale(1.03);
+}
+
+#contact {
+  text-align: center;
+  padding: 2rem;
+  background: #fff5e1;
+  font-size: 1.2rem;
 }
