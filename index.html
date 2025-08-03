@@ -1,72 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-<head><!-- Lightbox CSS -->
-<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ismail Ben Othman - Artiste Peintre</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body><!-- Lightbox JS -->
-<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-  <header class="hero">
-    <img src="ismael.jpg" alt="Ismail Ben Othman" class="profile-pic" />
-    <h1>Ismail Ben Othman</h1>
-    <p class="subtitle" data-fr="Artiste peintre tunisien" data-en="Tunisian Visual Artist">Artiste peintre tunisien</p>
-    <button class="lang-switch" onclick="switchLang()">FR/EN</button>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/ismail.benothman" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-  </header>
-
-  <main>
-    <section class="gallery-section" style="background-color: #FFD700;"> <!-- Jaune cadmium -->
-  <h2>Galerie</h2>
-  <div class="gallery">
-    <a href="oeuvre1.jpg" class="lightbox">
-      <img src="oeuvre1.jpg" alt="">
-    </a>
-    <a href="oeuvre2.jpg" class="lightbox">
-      <img src="oeuvre2.jpg" alt="">
-    </a>
-    <a href="oeuvre3.jpg" class="lightbox">
-      <img src="oeuvre3.jpg" alt="">
-    </a>
-    <a href="oeuvre4.jpg" class="lightbox">
-      <img src="oeuvre4.jpg" alt="">
-    </a>
-    <<a href="oeuvre5.jpg" class="lightbox">
-  <img src="oeuvre5.jpg" alt="">
-</a>
-<a href="oeuvre6.jpg" class="lightbox">
-  <img src="oeuvre6.jpg" alt="">
-</a>
-<a href="oeuvre7.jpg" class="lightbox">
-  <img src="oeuvre7.jpg" alt="">
-</a>
-...
-<a href="oeuvre13.jpg" class="lightbox">
-  <img src="oeuvre13.jpg" alt="">
-</a>!-- continue avec les autres œuvres -->
-  </div>
-</section>
-  </section>
-  </main>
-
-  <script>
-    function switchLang() {
-      const elements = document.querySelectorAll('[data-fr]');
-      elements.forEach(el => {
-        const current = el.textContent.trim();
-        const fr = el.getAttribute('data-fr');
-        const en = el.getAttribute('data-en');
-        el.textContent = (current === fr) ? en : fr;
-      });
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
-  </script>
+    .profile-section {
+      background-color: #4B5358; /* Gris de Payne */
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+    }
+    .gallery-section {
+      background-color: #FFD700; /* Jaune cadmium */
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 3px solid white;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <section class="profile-section">
+    <img src="ismael.jpg" alt="Ismail Ben Othman" class="profile-photo">
+    <h1>Ismail Ben Othman</h1>
+    <p>Artiste peintre tunisien</p>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <a href="oeuvre1.jpg" data-lightbox="galerie"><img src="oeuvre1.jpg" alt=""></a>
+      <a href="oeuvre2.jpg" data-lightbox="galerie"><img src="oeuvre2.jpg" alt=""></a>
+      <a href="oeuvre3.jpg" data-lightbox="galerie"><img src="oeuvre3.jpg" alt=""></a>
+      <a href="oeuvre4.jpg" data-lightbox="galerie"><img src="oeuvre4.jpg" alt=""></a>
+      <a href="oeuvre5.jpg" data-lightbox="galerie"><img src="oeuvre5.jpg" alt=""></a>
+      <a href="oeuvre6.jpg" data-lightbox="galerie"><img src="oeuvre6.jpg" alt=""></a>
+      <a href="oeuvre7.jpg" data-lightbox="galerie"><img src="oeuvre7.jpg" alt=""></a>
+      <a href="oeuvre8.jpg" data-lightbox="galerie"><img src="oeuvre8.jpg" alt=""></a>
+      <a href="oeuvre9.jpg" data-lightbox="galerie"><img src="oeuvre9.jpg" alt=""></a>
+      <a href="oeuvre10.jpg" data-lightbox="galerie"><img src="oeuvre10.jpg" alt=""></a>
+      <a href="oeuvre11.jpg" data-lightbox="galerie"><img src="oeuvre11.jpg" alt=""></a>
+      <a href="oeuvre12.jpg" data-lightbox="galerie"><img src="oeuvre12.jpg" alt=""></a>
+      <a href="oeuvre13.jpg" data-lightbox="galerie"><img src="oeuvre13.jpg" alt=""></a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 </body>
 </html>
-
