@@ -2,29 +2,57 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Ismail Ben Othman - Artiste Peintre</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ismail Ben Othman - Artiste Peintre</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Ismail Ben Othman</h1>
-        <p>Artiste peintre contemporain</p>
-    </header>
+  <header class="hero">
+    <img src="profile.jpg" alt="Ismail Ben Othman" class="profile-pic" />
+    <h1>Ismail Ben Othman</h1>
+    <p class="subtitle" data-fr="Artiste peintre tunisien" data-en="Tunisian Visual Artist">Artiste peintre tunisien</p>
+    <div class="lang-toggle">
+      <button onclick="switchLanguage()">FR/EN</button>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/ismail.benothman" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </header>
 
-    <section class="gallery">
-        <a href="images/1.jpg" data-lightbox="artworks"><img src="images/1.jpg" alt="œuvre 1"></a>
-        <a href="images/2.jpg" data-lightbox="artworks"><img src="images/2.jpg" alt="œuvre 2"></a>
-        <a href="images/3.jpg" data-lightbox="artworks"><img src="images/3.jpg" alt="œuvre 3"></a>
-        <a href="images/4.jpg" data-lightbox="artworks"><img src="images/4.jpg" alt="œuvre 4"></a>
-        <!-- Ajoute plus ici si nécessaire -->
-    </section>
+  <main class="gallery-section">
+    <h2 data-fr="Galerie" data-en="Gallery">Galerie</h2>
+    <div class="gallery">
+      <!-- Images à insérer manuellement dans GitHub -->
+      <!-- Ex: <a href="images/oeuvre1.jpg" class="image-popup"><img src="images/oeuvre1.jpg" alt=""></a> -->
+    </div>
+  </main>
 
-    <footer>
-        <p>© 2025 Ismail Ben Othman</p>
-    </footer>
+  <script>
+    function switchLanguage() {
+      const elements = document.querySelectorAll('[data-fr]');
+      elements.forEach(el => {
+        const currentLang = el.innerText === el.dataset.fr ? "fr" : "en";
+        el.innerText = currentLang === "fr" ? el.dataset.en : el.dataset.fr;
+      });
+    }
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    // Popup pour images
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".image-popup").forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const imgSrc = this.getAttribute("href");
+          const popup = document.createElement("div");
+          popup.className = "popup";
+          popup.innerHTML = `<div class="popup-overlay" onclick="this.parentNode.remove()"></div><img src="${imgSrc}" class="popup-img"/>`;
+          document.body.appendChild(popup);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
