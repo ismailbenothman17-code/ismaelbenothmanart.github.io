@@ -1,58 +1,146 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ismail Ben Othman - Artiste Peintre</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffef7;
+    }
+
+    header {
+      background-color: #404c5a; /* Gris de Payne */
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2em;
+    }
+
+    .lang-switch {
+      margin: 15px 0;
+    }
+
+    .lang-switch button {
+      background-color: #ffde00;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .social-links {
+      margin: 15px 0;
+      font-size: 1.5em;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 10px;
+      transition: transform 0.2s;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+      color: #ffde00;
+    }
+
+    section.gallery-section {
+      background-color: #ffeb3b; /* Cadmium Yellow */
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
+
 <body>
-  <header class="hero">
-    <img src="profile.jpg" alt="Ismail Ben Othman" class="profile-pic" />
+  <header>
+    <img src="ismael.jpg" alt="Ismail Ben Othman" class="profile-img" />
     <h1>Ismail Ben Othman</h1>
-    <p class="subtitle" data-fr="Artiste peintre tunisien" data-en="Tunisian Visual Artist">Artiste peintre tunisien</p>
-    <div class="lang-toggle">
-      <button onclick="switchLanguage()">FR/EN</button>
+    <p>Artiste peintre tunisien</p>
+
+    <div class="lang-switch">
+      <button onclick="window.location.href='en.html'">FR/EN</button>
     </div>
-    <div class="social-icons">
+
+    <div class="social-links">
       <a href="https://www.facebook.com/ismail.benothman" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
   </header>
 
-  <main class="gallery-section">
-    <h2 data-fr="Galerie" data-en="Gallery">Galerie</h2>
+  <section class="gallery-section">
+    <h2>Galerie</h2>
     <div class="gallery">
-      <!-- Images à insérer manuellement dans GitHub -->
-      <!-- Ex: <a href="images/oeuvre1.jpg" class="image-popup"><img src="images/oeuvre1.jpg" alt=""></a> -->
+      <img src="oeuvre1.jpg" alt="Tableau 1">
+      <img src="oeuvre2.jpg" alt="Tableau 2">
+      <img src="oeuvre3.jpg" alt="Tableau 3">
+      <img src="oeuvre4.jpg" alt="Tableau 4">
+      <img src="oeuvre5.jpg" alt="Tableau 5">
+      <img src="oeuvre6.jpg" alt="Tableau 6">
+      <img src="oeuvre7.jpg" alt="Tableau 7">
+      <img src="oeuvre8.jpg" alt="Tableau 8">
+      <img src="oeuvre10.jpg" alt="Tableau 9">
+      <img src="oeuvre11.jpg" alt="Tableau 10">
+      <img src="oeuvre12.jpg" alt="Tableau 11">
+      <img src="oeuvre13.jpg" alt="Tableau 12">
     </div>
-  </main>
+  </section>
 
-  <script>
-    function switchLanguage() {
-      const elements = document.querySelectorAll('[data-fr]');
-      elements.forEach(el => {
-        const currentLang = el.innerText === el.dataset.fr ? "fr" : "en";
-        el.innerText = currentLang === "fr" ? el.dataset.en : el.dataset.fr;
-      });
-    }
-
-    // Popup pour images
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll(".image-popup").forEach(link => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          const imgSrc = this.getAttribute("href");
-          const popup = document.createElement("div");
-          popup.className = "popup";
-          popup.innerHTML = `<div class="popup-overlay" onclick="this.parentNode.remove()"></div><img src="${imgSrc}" class="popup-img"/>`;
-          document.body.appendChild(popup);
-        });
-      });
-    });
-  </script>
+  <footer>
+    &copy; 2025 Ismail Ben Othman. Tous droits réservés.
+  </footer>
 </body>
+
 </html>
